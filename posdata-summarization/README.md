@@ -11,19 +11,16 @@
 - Eclipseのインストール（必須ではありません）
 
 仮想OSのUbuntuと上記各ソフトウェアのインストール手順は、Asakusa Frameworkスタートガイド（注1）を参考にしてソフトウェアのインストールと環境変数の設定をしてください。
-なお、本サンプルアプリケーションはOSユーザー「asakusa」を前提としていますので、Ubuntuをインストールする際にユーザー「asakusa」を作成して以降のセットアップ手順を実行してください。
 
-（注1. http://asakusafw.s3.amazonaws.com/documents/0.2/release/ja/html/introduction/start-guide.html）
+（注1. http://asakusafw.s3.amazonaws.com/documents/0.2/release/ja/html/introduction/start-guide.html ）
 
-サンプルソースコードをダウンロードして、以下の手順に沿ってインストールしてください。
+サンプルソースコードをダウンロード（注2）して展開したものに含まれる posdata-summarization ディレクトリを ~/workspace 以下に設置してください。
 
-    mkdir -p ~/workspace
-    cd ~/workspace
-    tar xvf /path/to/asakusafw-tutorials.tar.gz
+（注2. https://github.com/asakusafw/asakusafw-tutorials/zipball/master ）
 
 以下のコマンドを実行してサンプルアプリケーションをビルドしてください。ビルドを実行するとソースコードの自動生成やテストが実行されて、「BUILD SUCCESS」と表示されれば、ビルドが完了します。
 
-    cd ~/workspace/asakusafw-tutorials/posdata-summarization
+    cd ~/workspace/posdata-summarization
     mvn assembly:single antrun:run
     cp src/main/resources/posdata-summarization.properties $ASAKUSA_HOME/windgate/profile
     mvn clean package eclipse:eclipse
@@ -31,16 +28,15 @@
 
 ## バッチ処理の実行
 
-バッチを実行するにはビルドを実行した結果作成されたtarget以下のjarファイル（注2）を$ASAKUSA_HOME/batchapps以下に展開してください。
+バッチを実行するにはビルドを実行した結果作成されたtarget以下のjarファイル（注3）を$ASAKUSA_HOME/batchapps以下に展開してください。
 
 ### バッチアプリケーションのデプロイ
 
-    cd ~/workspace/asakusafw-tutorials/posdata-summarization
-    cp target/*batchapps*.jar $ASAKUSA_HOME/batchapps
+    cp ~/workspace/posdata-summarization/target/*batchapps*.jar $ASAKUSA_HOME/batchapps
     cd $ASAKUSA_HOME/batchapps
     jar xf *batchapps*.jar
 
-（注2.<pom.xmlのartifactId>-batchapps-<pom.xmlのversion>.jarというファイルです）
+（注3.&lt;pom.xmlのartifactId&gt;-batchapps-&lt;pom.xmlのversion&gt;.jarというファイルです）
 
 Asakusa Frameworkには、YAESSというバッチ実行ツールが提供されています。以下のコマンドでバッチアプリケーションを実行します。
 

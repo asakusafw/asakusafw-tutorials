@@ -1,0 +1,15 @@
+@windgate.csv(
+    has_header = TRUE
+)
+store = {
+
+    @windgate.csv.field(name = "店舗コード")
+    store_code : INT;
+    @windgate.csv.field(name = "店舗名")
+    store_name : TEXT;
+
+    @windgate.csv.field(name = "店番有効開始日")
+    apply_start_date : DATE;
+    @windgate.csv.field(name = "店番無効予定日")
+    apply_end_date : DATE;
+};

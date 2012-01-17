@@ -1,0 +1,3 @@
+summarized = prepared_pos_item + {
+	customers : INT;
+};

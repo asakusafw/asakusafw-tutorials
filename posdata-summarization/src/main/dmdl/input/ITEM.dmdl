@@ -1,0 +1,16 @@
+@windgate.csv(
+    has_header = TRUE
+)
+item = {
+    @windgate.csv.field(name = "店舗コード")
+    store_code : INT;
+    @windgate.csv.field(name = "GTIN")
+    gtin : LONG;
+    @windgate.csv.field(name = "商品名")
+    item_name : TEXT;
+
+    @windgate.csv.field(name = "有効開始日付")
+    apply_start_date : DATE;
+    @windgate.csv.field(name = "無効予定日")
+    apply_end_date : DATE;
+};

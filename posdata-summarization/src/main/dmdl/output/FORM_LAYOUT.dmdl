@@ -1,0 +1,28 @@
+@windgate.csv(
+	has_header = TRUE
+)
+form_layout = {
+
+	@windgate.csv.field(name = "店番号")
+	store_code : INT;
+    @windgate.csv.field(name = "日付")
+    issue_date : DATE;
+	@windgate.csv.field(name = "部門コード")
+	section_code : INT;
+
+	@windgate.csv.field(name = "行番号1 - 構成")
+	line_1 : TEXT;
+	@windgate.csv.field(name = "行番号2 - 構成")
+	line_2 : TEXT;
+	@windgate.csv.field(name = "行番号3 - 構成")
+	line_3 : TEXT;
+	@windgate.csv.field(name = "行番号4 - 構成")
+	line_4 : TEXT;
+	@windgate.csv.field(name = "行番号5 - 構成")
+	line_5 : TEXT;
+	@windgate.csv.field(name = "行番号6 - 構成")
+	line_6 : TEXT;
+
+	@windgate.csv.field(name = "ページ番号")
+	page_number : INT;
+};

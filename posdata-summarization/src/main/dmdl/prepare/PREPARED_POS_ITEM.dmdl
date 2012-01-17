@@ -1,0 +1,35 @@
+@windgate.csv(
+    has_header = TRUE
+)
+prepared_pos_item = {
+
+    @windgate.csv.field(name = "店番号")
+    store_code : INT;
+    @windgate.csv.field(name = "日付")
+    issue_date : DATE;
+
+    @windgate.csv.field(name = "レシートID")
+    receipt_id : INT;
+
+    @windgate.csv.field(name = "JANコード")
+    jan_code : LONG;
+    @windgate.csv.field(name = "商品名")
+    item_name : TEXT;
+
+	@windgate.csv.field(name = "部門コード")
+	section_code : INT;
+	@windgate.csv.field(name = "カテゴリーコード1")
+	category_code_1 : INT;
+	@windgate.csv.field(name = "カテゴリーコード2")
+	category_code_2 : INT;
+
+    @windgate.csv.field(name = "売価")
+    price : INT;
+    @windgate.csv.field(name = "数量")
+    quantity : INT;
+    @windgate.csv.field(name = "金額")
+    amount : INT;
+
+	@windgate.csv.field(name = "消費税")
+    consumption_tax  : INT;
+};

@@ -1,0 +1,6 @@
+joined_pos_item = pos_item + {
+	section_code : INT;
+
+    category_code_1 : INT;
+    category_code_2 : INT;
+};

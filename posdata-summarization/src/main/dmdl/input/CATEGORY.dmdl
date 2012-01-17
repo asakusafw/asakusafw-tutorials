@@ -1,0 +1,23 @@
+@windgate.csv(
+    has_header = TRUE
+)
+category = {
+    @windgate.csv.field(name = "JANコード")
+    jan_code : LONG;
+    @windgate.csv.field(name = "商品名")
+    item_name : TEXT;
+
+    @windgate.csv.field(name = "部門コード")
+    section_code : INT;
+    @windgate.csv.field(name = "部門名")
+    section_name : TEXT;
+
+    @windgate.csv.field(name = "カテゴリー1コード")
+    category_code_1 : INT;
+    @windgate.csv.field(name = "カテゴリー1名")
+    category_name_1 : TEXT;
+    @windgate.csv.field(name = "カテゴリー2コード")
+    category_code_2 : INT;
+    @windgate.csv.field(name = "カテゴリー2名")
+    category_name_2 : TEXT;
+};

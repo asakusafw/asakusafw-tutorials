@@ -1,0 +1,24 @@
+@windgate.csv(
+    has_header = TRUE
+)
+error_consumption_tax = err + {
+
+    @windgate.csv.field(name = "計算消費税")
+    adjusted_consumption_tax : INT;
+    @windgate.csv.field(name = "レシート表示")
+    receipt_consumption_tax : INT;
+
+    @windgate.csv.field(name = "店番号")
+    store_code : INT;
+    @windgate.csv.field(name = "日付")
+    issue_date : DATE;
+    @windgate.csv.field(name = "レシートID")
+    receipt_id : INT;
+    @windgate.csv.field(name = "合計金額")
+    total_amount : INT;
+
+	@windgate.csv.field(name = "受取金額")
+    total_received_amount : INT;
+    @windgate.csv.field(name = "詳細情報")
+    description : TEXT;
+};

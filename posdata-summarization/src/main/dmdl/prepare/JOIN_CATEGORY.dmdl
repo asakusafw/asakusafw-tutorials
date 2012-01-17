@@ -1,0 +1,9 @@
+joined join_category = pos_item % jan_code + category -> {
+
+    jan_code -> jan_code;
+
+	section_code -> section_code;
+
+    category_code_1 -> category_code_1;
+    category_code_2 -> category_code_2;
+} % jan_code;

@@ -1,0 +1,4 @@
+projective err = {
+    @windgate.csv.field(name = "ERROR_CODE")
+    error_code : INT;
+};
